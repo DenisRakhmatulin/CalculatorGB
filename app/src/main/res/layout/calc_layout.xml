@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bckgrnd_img" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="10dp"
+        android:columnCount="4">
+
+
+        <EditText
+            android:id="@+id/edit_text_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:layout_columnWeight="4"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/white"
+            android:hint="@string/default_num"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/key_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_one"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_two"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_three"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#00688B"
+            android:text="@string/key_split"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_four"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_five"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_six"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#8B6914"
+            android:text="@string/key_multiply"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_seven"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_eight"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_nine"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#8B7355"
+            android:text="@string/key_minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_zero"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#607B8B"
+            android:text="@string/key_dot"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#8B3E2F"
+            android:text="@string/key_plus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:layout_columnWeight="3"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#458B74"
+            android:text="@string/key_result"
+            android:textSize="20sp" />
+
+    </GridLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
