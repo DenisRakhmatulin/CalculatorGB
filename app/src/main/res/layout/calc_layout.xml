@@ -11,9 +11,11 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="4dp"
+        android:layout_marginHorizontal="@dimen/default_margin"
         android:layout_marginVertical="10dp"
-        android:columnCount="4">
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true">
 
 
         <EditText
@@ -22,8 +24,6 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="4"
             android:layout_columnWeight="4"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:background="@color/white"
             android:hint="@string/default_num"
             android:inputType="number"
@@ -35,8 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_one"
             android:textSize="20sp" />
@@ -46,8 +44,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_two"
             android:textSize="20sp" />
@@ -57,8 +53,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_three"
             android:textSize="20sp" />
@@ -68,8 +62,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#00688B"
             android:text="@string/key_split"
             android:textSize="20sp" />
@@ -79,8 +71,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_four"
             android:textSize="20sp" />
@@ -90,8 +80,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_five"
             android:textSize="20sp" />
@@ -101,8 +89,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_six"
             android:textSize="20sp" />
@@ -112,8 +98,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#8B6914"
             android:text="@string/key_multiply"
             android:textSize="20sp" />
@@ -123,8 +107,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_seven"
             android:textSize="20sp" />
@@ -134,8 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginHorizontal="2dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_eight"
             android:textSize="20sp" />
@@ -145,8 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginHorizontal="@dimen/default_margin"
             android:backgroundTint="#607B8B"
             android:text="@string/key_nine"
             android:textSize="20sp" />
@@ -156,8 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginHorizontal="@dimen/default_margin"
             android:backgroundTint="#8B7355"
             android:text="@string/key_minus"
             android:textSize="20sp" />
@@ -169,8 +148,6 @@
             android:layout_columnSpan="2"
             android:layout_columnWeight="2"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_zero"
             android:textSize="20sp" />
@@ -180,8 +157,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#607B8B"
             android:text="@string/key_dot"
             android:textSize="20sp" />
@@ -193,8 +168,6 @@
             android:layout_rowSpan="2"
             android:layout_rowWeight="2"
             android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#8B3E2F"
             android:text="@string/key_plus"
             android:textSize="20sp" />
@@ -206,8 +179,6 @@
             android:layout_columnSpan="3"
             android:layout_columnWeight="3"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:backgroundTint="#458B74"
             android:text="@string/key_result"
             android:textSize="20sp" />
