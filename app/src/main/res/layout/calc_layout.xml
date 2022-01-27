@@ -18,17 +18,27 @@
         android:useDefaultMargins="true">
 
 
-        <EditText
-            android:id="@+id/edit_text_01"
+        <TextView
+            android:id="@+id/result_string"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="4"
             android:layout_columnWeight="4"
             android:background="@color/white"
-            android:hint="@string/default_num"
-            android:inputType="number"
+            android:text="@string/default_num"
             android:textAlignment="textEnd"
             android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/operation_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:layout_columnWeight="4"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/key_one"
@@ -168,18 +178,27 @@
             android:layout_rowSpan="2"
             android:layout_rowWeight="2"
             android:layout_columnWeight="1"
-            android:backgroundTint="#8B3E2F"
+            android:backgroundTint="#458B74"
             android:text="@string/key_plus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/key_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#8B3E2F"
+            android:text="@string/key_reset"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/key_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="3"
-            android:layout_columnWeight="3"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
             android:layout_gravity="fill_horizontal"
-            android:backgroundTint="#458B74"
+            android:backgroundTint="#607B8B"
             android:text="@string/key_result"
             android:textSize="20sp" />
 

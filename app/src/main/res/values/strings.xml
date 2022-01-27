@@ -17,4 +17,5 @@
     <string name="key_plus">+</string>
     <string name="key_result">=</string>
     <string name="default_num">0</string>
+    <string name="key_reset">C</string>
 </resources>
