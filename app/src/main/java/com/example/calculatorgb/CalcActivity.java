@@ -5,26 +5,36 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Locale;
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView resultString;
     private TextView operationString;
-    private boolean dotFlag = false;
+    private Calculator calculator;
+    private static final String ARG = "Calculator";
 
-    Calculator calculator = new Calculator();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calc_layout);
 
+
+        if (savedInstanceState == null) {
+            calculator = new Calculator();
+        } else {
+            calculator = savedInstanceState.getParcelable(ARG);
+        }
+
         resultString = findViewById(R.id.result_string);
         operationString = findViewById(R.id.operation_string);
+
+        resultString.setText(calculator.getResult());
+        operationString.setText(calculator.getLastBtn());
+
 
         findViewById(R.id.key_one).setOnClickListener(this);
         findViewById(R.id.key_dot).setOnClickListener(this);
@@ -46,108 +56,112 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(ARG, calculator);
+    }
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        String buf;
         switch (view.getId()) {
             case R.id.key_one:
-                buf = calculator.buttonPush("1", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("1", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_two:
-                buf = calculator.buttonPush("2", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("2", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_three:
-                buf = calculator.buttonPush("3", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("3", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_four:
-                buf = calculator.buttonPush("4", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("4", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_five:
-                buf = calculator.buttonPush("5", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("5", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_six:
-                buf = calculator.buttonPush("6", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("6", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_seven:
-                buf = calculator.buttonPush("7", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("7", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_eight:
-                buf = calculator.buttonPush("8", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("8", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_nine:
-                buf = calculator.buttonPush("9", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("9", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_zero:
-                buf = calculator.buttonPush("0", resultString.getText().toString());
-                resultString.setText(buf);
+                calculator.buttonPush("0", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_dot:
-                if (dotFlag) {
-                    break;
-                } else {
-                    buf = calculator.buttonPush(".", resultString.getText().toString());
-                    resultString.setText(buf);
-                    dotFlag = true;
-                }
+                calculator.buttonPush(".", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_plus:
-                operationString.setText(calculator.operationPush("+", resultString.getText().toString()));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("+", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_minus:
-                operationString.setText(calculator.operationPush("-", resultString.getText().toString()));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("-", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_multiply:
-                operationString.setText(calculator.operationPush("x", resultString.getText().toString()));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("x", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_split:
-                operationString.setText(calculator.operationPush("/", resultString.getText().toString()));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("/", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_result:
-                resultString.setText(calculator.resultPush(resultString.getText().toString()));
+                calculator.resultPush(resultString.getText().toString());
+                resultString.setText(calculator.getResult());
                 operationString.setText(null);
                 calculator.setValueDbl(0d);
-                dotFlag = resultString.getText().toString().contains(".");
+                calculator.setLastBtn(null);
                 break;
 
             case R.id.key_reset:
                 resultString.setText("0");
                 operationString.setText(null);
+
                 calculator.setValueDbl(0d);
                 calculator.setOperation(null);
-                dotFlag = false;
+                calculator.setLastNum(null);
+                calculator.setLastBtn(null);
+                calculator.setResult("0");
                 break;
 
 
