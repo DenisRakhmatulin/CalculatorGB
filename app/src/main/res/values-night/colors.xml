@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="operation_text_color">#6492A8</color>
+    <color name="operation_tint_color">#1E4665</color>
+    <color name="num_key_color">#365B77</color>
+    <color name="split_key_color">#043E75</color>
+    <color name="multiply_key_color">#53410B</color>
+    <color name="reset_key_color">#530808</color>
+    <color name="minus_key_color">#6A2004</color>
+    <color name="plus_key_color">#244304</color>
+    <color name="result_text_color">#73C0F4</color>
+    <color name="result_tint_color">#033149</color>
+</resources>

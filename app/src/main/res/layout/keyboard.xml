@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/calc_layout">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_one"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_columnWeight="1"
+        android:text="@string/key_one"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_two"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_two"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_three"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_three"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_split"
+        style="@style/CalcButton.Split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_split"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_four"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_four"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_five"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_five"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_six"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_six"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_multiply"
+        style="@style/CalcButton.Multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_multiply"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_seven"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_seven"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_eight"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_eight"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_nine"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_nine"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_minus"
+        style="@style/CalcButton.Minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:text="@string/key_minus"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_zero"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/key_zero"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_dot"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_dot"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_plus"
+        style="@style/CalcButton.Plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="2"
+        android:layout_rowWeight="2"
+        android:layout_columnWeight="1"
+        android:text="@string/key_plus"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_reset"
+        style="@style/CalcButton.Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/key_reset"
+        app:cornerRadius="@dimen/corner_rad" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key_result"
+        style="@style/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/key_result"
+        app:cornerRadius="@dimen/corner_rad" />
+
+</merge>

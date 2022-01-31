@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,201 +8,47 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bckgrnd_img" />
+        android:background="@drawable/background" />
+
+    <TextView
+        android:id="@+id/result_string"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:background="@color/result_tint_color"
+        android:text="@string/default_num"
+        android:textAlignment="textEnd"
+        android:textColor="@color/result_text_color"
+        android:textSize="@dimen/result_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/operation_string"
+        app:layout_constraintEnd_toEndOf="@id/keyboard"
+        app:layout_constraintStart_toStartOf="@id/keyboard" />
+
+    <TextView
+        android:id="@+id/operation_string"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/vertical_shift"
+        android:background="@color/operation_tint_color"
+        android:textAlignment="textEnd"
+        android:textColor="@color/operation_text_color"
+        android:textSize="@dimen/operation_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard"
+        app:layout_constraintEnd_toEndOf="@id/keyboard"
+        app:layout_constraintStart_toStartOf="@id/keyboard"
+        tools:text="1234567" />
 
     <GridLayout
+        android:id="@+id/keyboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/default_margin"
-        android:layout_marginVertical="10dp"
-        android:columnCount="4"
+        android:layout_marginVertical="@dimen/vertical_shift"
+        android:columnCount="@integer/column_count"
         android:orientation="horizontal"
-        android:useDefaultMargins="true">
+        app:layout_constraintBottom_toBottomOf="parent">
 
-
-        <TextView
-            android:id="@+id/result_string"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="4"
-            android:layout_columnWeight="4"
-            android:background="@color/white"
-            android:text="@string/default_num"
-            android:textAlignment="textEnd"
-            android:textSize="40sp" />
-
-        <TextView
-            android:id="@+id/operation_string"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="4"
-            android:layout_columnWeight="4"
-            android:background="@color/teal_700"
-            android:textAlignment="textEnd"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/key_one"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_one"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_two"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_three"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_split"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#00688B"
-            android:text="@string/key_split"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_four"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_four"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_five"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_five"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_six"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_six"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_multiply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#8B6914"
-            android:text="@string/key_multiply"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_seven"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_seven"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_eight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_marginHorizontal="2dp"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_eight"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_nine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_marginHorizontal="@dimen/default_margin"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_nine"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_marginHorizontal="@dimen/default_margin"
-            android:backgroundTint="#8B7355"
-            android:text="@string/key_minus"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_zero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="2"
-            android:layout_gravity="fill_horizontal"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_zero"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_dot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_dot"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowSpan="2"
-            android:layout_rowWeight="2"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#458B74"
-            android:text="@string/key_plus"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:backgroundTint="#8B3E2F"
-            android:text="@string/key_reset"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/key_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="2"
-            android:layout_gravity="fill_horizontal"
-            android:backgroundTint="#607B8B"
-            android:text="@string/key_result"
-            android:textSize="20sp" />
+        <include layout="@layout/keyboard" />
 
     </GridLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

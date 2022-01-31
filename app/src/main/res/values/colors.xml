@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="operation_text_color">#BFEFFF</color>
+    <color name="operation_tint_color">#6498A8</color>
+    <color name="num_key_color">#5F90A2</color>
+    <color name="split_key_color">#1874CD</color>
+    <color name="multiply_key_color">#DAA520</color>
+    <color name="reset_key_color">#B22222</color>
+    <color name="minus_key_color">#CD3700</color>
+    <color name="plus_key_color">#458B00</color>
+    <color name="result_text_color">#022F3A</color>
+    <color name="result_tint_color">#9DC8D5</color>
 </resources>
