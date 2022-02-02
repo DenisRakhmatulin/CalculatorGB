@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">@dimen/default_margin</item>
+        <item name="android:layout_marginEnd">@dimen/default_margin</item>
+        <item name="android:textSize">@dimen/keyboard_text_size</item>
+        <item name="android:backgroundTint">@color/num_key_color</item>
+    </style>
+
+    <style name="CalcButton.Split">
+        <item name="android:backgroundTint">@color/split_key_color</item>
+    </style>
+
+    <style name="CalcButton.Multiply">
+        <item name="android:backgroundTint">@color/multiply_key_color</item>
+    </style>
+
+    <style name="CalcButton.Plus">
+        <item name="android:backgroundTint">@color/plus_key_color</item>
+    </style>
+
+    <style name="CalcButton.Minus">
+        <item name="android:backgroundTint">@color/minus_key_color</item>
+    </style>
+
+    <style name="CalcButton.Reset">
+        <item name="android:backgroundTint">@color/reset_key_color</item>
+    </style>
+
+</resources>

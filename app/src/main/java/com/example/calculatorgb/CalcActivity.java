@@ -5,27 +5,36 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Locale;
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView resultString;
     private TextView operationString;
-    private Float result = 0f;
-    private Float number = 0f;
-    private boolean dotFlag = false;
-    private String operation = null;
+    private Calculator calculator;
+    private static final String ARG = "Calculator";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calc_layout);
 
+
+        if (savedInstanceState == null) {
+            calculator = new Calculator();
+        } else {
+            calculator = savedInstanceState.getParcelable(ARG);
+        }
+
         resultString = findViewById(R.id.result_string);
         operationString = findViewById(R.id.operation_string);
+
+        resultString.setText(calculator.getResult());
+        operationString.setText(calculator.getLastBtn());
+
 
         findViewById(R.id.key_one).setOnClickListener(this);
         findViewById(R.id.key_dot).setOnClickListener(this);
@@ -47,187 +56,112 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(ARG, calculator);
+    }
 
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.key_one:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_one);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "1"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("1", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_two:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_two);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "2"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("2", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_three:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_three);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "3"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("3", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_four:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_four);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "4"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("4", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_five:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_five);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "5"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("5", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_six:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_six);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "6"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("6", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_seven:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_seven);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "7"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("7", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_eight:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_eight);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "8"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("8", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_nine:
-                if (resultString.getText().toString().equals("0")) {
-                    resultString.setText(R.string.key_nine);
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "9"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("9", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_zero:
-                if (resultString.getText().toString().equals("0")) {
-                    result = Float.parseFloat(resultString.getText().toString());
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "0"));
-                    result = Float.parseFloat(resultString.getText().toString());
-                }
+                calculator.buttonPush("0", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_dot:
-                if (dotFlag) {
-                    break;
-                } else {
-                    resultString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + "."));
-                    result = Float.parseFloat(resultString.getText().toString() + "0");
-                    dotFlag = true;
-                }
+                calculator.buttonPush(".", resultString.getText().toString());
+                resultString.setText(calculator.getLastNum());
                 break;
 
             case R.id.key_plus:
-                operation = "+";
-                number = Float.parseFloat(resultString.getText().toString());
-                operationString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + " + "));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("+", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_minus:
-                operation = "-";
-                number = Float.parseFloat(resultString.getText().toString());
-                operationString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + " - "));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("-", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_multiply:
-                operation = "x";
-                number = Float.parseFloat(resultString.getText().toString());
-                operationString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + " x "));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("x", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_split:
-                operation = "/";
-                number = Float.parseFloat(resultString.getText().toString());
-                operationString.setText(String.format(Locale.getDefault(), "%s", resultString.getText().toString() + " / "));
-                resultString.setText("0");
-                dotFlag = false;
+                calculator.operationPush("/", resultString.getText().toString());
+                operationString.setText(calculator.getLastBtn());
+                resultString.setText(calculator.getResult());
                 break;
 
             case R.id.key_result:
-                switch (operation) {
-
-                    case "+":
-                        number = number + Float.parseFloat(resultString.getText().toString());
-                        break;
-
-                    case "-":
-                        number = number - Float.parseFloat(resultString.getText().toString());
-                        break;
-
-                    case "x":
-                        number = number * Float.parseFloat(resultString.getText().toString());
-                        break;
-
-                    case "/":
-                        number = number / Float.parseFloat(resultString.getText().toString());
-                        break;
-
-                }
+                calculator.resultPush(resultString.getText().toString());
+                resultString.setText(calculator.getResult());
                 operationString.setText(null);
-                resultString.setText(String.valueOf(number));
-                result = 0f;
-                number = 0f;
-                dotFlag = false;
-                operation = null;
+                calculator.setValueDbl(0d);
+                calculator.setLastBtn(null);
                 break;
 
             case R.id.key_reset:
-                operationString.setText(null);
                 resultString.setText("0");
-                result = 0f;
-                number = 0f;
-                dotFlag = false;
-                operation = null;
+                operationString.setText(null);
+
+                calculator.setValueDbl(0d);
+                calculator.setOperation(null);
+                calculator.setLastNum(null);
+                calculator.setLastBtn(null);
+                calculator.setResult("0");
                 break;
 
 

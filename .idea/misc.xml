@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/drawable-land-night/background.xml" value="0.634765625" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/drawable-land/background.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/drawable-land/bckground_img_day.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/drawable-night/background.xml" value="0.3828125" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/drawable/background.xml" value="0.3828125" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/layout-land/keyboard.xml" value="0.33" />
         <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/layout/calc_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Sar/AndroidStudioProjects/CalculatorGB/app/src/main/res/layout/keyboard.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
