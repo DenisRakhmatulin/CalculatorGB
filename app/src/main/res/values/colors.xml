@@ -17,4 +17,8 @@
     <color name="plus_key_color">#458B00</color>
     <color name="result_text_color">#022F3A</color>
     <color name="result_tint_color">#9DC8D5</color>
+    <color name="num_key_color_v2">#B33689</color>
+    <color name="operation_tint_color_V2">#9464A8</color>
+    <color name="result_text_color_V2">#3A022E</color>
+    <color name="result_tint_color_V2">#CD9DD5</color>
 </resources>

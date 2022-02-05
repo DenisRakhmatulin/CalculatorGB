@@ -18,4 +18,6 @@
     <string name="key_result">=</string>
     <string name="default_num">0</string>
     <string name="key_reset">C</string>
+    <string name="key_theme1">Theme #1</string>
+    <string name="key_theme2">Theme #2</string>
 </resources>

@@ -7,12 +7,12 @@ import java.util.Locale;
 
 public class Calculator implements Parcelable {
 
-    protected Double valueDbl = 0d;
-    protected String operation = null;
+    private Double valueDbl = 0d;
+    private String operation;
 
-    protected String lastNum = null;
-    protected String lastBtn = null;
-    protected String result = "0";
+    private String lastNum;
+    private String lastBtn;
+    private String result = "0";
 
     public Calculator() {
     }
