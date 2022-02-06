@@ -10,4 +10,8 @@
     <color name="plus_key_color">#244304</color>
     <color name="result_text_color">#73C0F4</color>
     <color name="result_tint_color">#033149</color>
+    <color name="num_key_color_v2">#68144C</color>
+    <color name="operation_tint_color_V2">#4F315C</color>
+    <color name="result_text_color_V2">#E151C2</color>
+    <color name="result_tint_color_V2">#4A2550</color>
 </resources>

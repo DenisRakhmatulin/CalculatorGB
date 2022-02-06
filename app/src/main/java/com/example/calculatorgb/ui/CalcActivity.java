@@ -1,13 +1,24 @@
-package com.example.calculatorgb;
+package com.example.calculatorgb.ui;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.calculatorgb.Calculator;
+import com.example.calculatorgb.R;
+import com.example.calculatorgb.domain.Theme;
+import com.example.calculatorgb.storage.ThemeStorage;
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,6 +31,24 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ThemeStorage storage = new ThemeStorage(this);
+
+        ActivityResultLauncher<Intent> settingsLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    Theme theme = (Theme) result.getData().getSerializableExtra(ThemeActivity.THEME_RESULT);
+                    storage.saveTheme(theme);
+                    recreate();
+                }
+            }
+        });
+
+
+
+        setTheme(storage.getTheme().getStyle());
+
         setContentView(R.layout.calc_layout);
 
 
@@ -53,6 +82,13 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.key_three).setOnClickListener(this);
         findViewById(R.id.key_two).setOnClickListener(this);
         findViewById(R.id.key_zero).setOnClickListener(this);
+
+        findViewById(R.id.change_theme).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                settingsLauncher.launch(ThemeActivity.intent(CalcActivity.this, storage.getTheme()));
+            }
+        });
 
     }
 
@@ -163,7 +199,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 calculator.setLastBtn(null);
                 calculator.setResult("0");
                 break;
-
 
         }
     }

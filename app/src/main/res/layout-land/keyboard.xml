@@ -7,7 +7,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_one"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_columnWeight="1"
@@ -16,7 +17,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_four"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -25,7 +27,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_seven"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -34,7 +37,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_dot"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -61,7 +65,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_two"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -70,7 +75,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_five"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -79,7 +85,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_eight"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -88,7 +95,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_zero"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"
@@ -119,7 +127,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_three"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -128,7 +137,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_six"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -138,7 +148,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_nine"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -147,7 +158,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_result"
-        style="@style/CalcButton"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"

@@ -8,6 +8,11 @@
         <item name="android:backgroundTint">@color/num_key_color</item>
     </style>
 
+    <style name="CalcButton.V2" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/keyboard_text_size</item>
+        <item name="android:backgroundTint">@color/num_key_color_v2</item>
+    </style>
+
     <style name="CalcButton.Split">
         <item name="android:backgroundTint">@color/split_key_color</item>
     </style>

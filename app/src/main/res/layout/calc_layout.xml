@@ -10,6 +10,17 @@
         android:layout_height="match_parent"
         android:background="@drawable/background" />
 
+    <ImageButton
+        android:id="@+id/change_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/vertical_shift"
+        android:background="@color/operation_tint_color"
+        android:src="@drawable/ic_baseline_build_circle_24"
+        app:layout_constraintBottom_toTopOf="@id/result_string"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
     <TextView
         android:id="@+id/result_string"
         android:layout_width="0dp"
